@@ -1,0 +1,48 @@
+@extends('admin.layouts.app')
+
+@section('title', 'Postingan Berita | SIMT')
+
+@section('content')
+    <div class="row mt-5">
+        <div class="col-6">
+            <div class="card py-3">
+                <div class="card-header">
+                    <h4 class="mb-3" style="color: #47245C">Cover Halaman Postingan Berita</h4>
+                    @if ($postinganberita->image)
+                        <img src="{{ asset('dist/assets/img/postinganberita/' . $postinganberita->image ?? '') }}"
+                            alt="" class="img-fluid img-thumbnail mb-1" style="max-width:600px">
+                    @elseif ($postinganberita->link)
+                        <div
+                            style="max-width: 100%; aspect-ratio: 16/9; border: 2px solid #f00; overflow: hidden; border-radius: 8px;">
+                            <x-embed url="{{ $postinganberita->link ?? '' }}" aspect-ratio="16:9" />
+                        </div>
+                    @else
+                        <p>Tidak Ada Cover</p>
+                    @endif
+                </div>
+                <div class="card-body">
+                    <div class="d-flex gap-1">
+                        <p class="fw-bold">Judul</p>
+                        <p>:</p>
+                        <p>{{ $postinganberita->judul ?? '' }}</p>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <p class="fw-bold">Nama Penulis</p>
+                        <p>:</p>
+                        <p>{{ $postinganberita->nama_penulis ?? '' }}</p>
+                    </div>
+                    {{-- <div class="d-flex gap-1">
+                        <p class="fw-bold">Link</p>
+                        <p>:</p>
+                        <p><a href="{{ $postinganberita->link ?? '' }}"
+                                target="_blank">{{ $postinganberita->judul ?? '' }}</a></p>
+                    </div> --}}
+                    <div class="d-flex flex-column">
+                        <p class="fw-bold mb-1">Isi Halaman</p>
+                        <p class="border p-3 rounded">{{ $postinganberita->isi_halaman ?? '' }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
