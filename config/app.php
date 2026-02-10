@@ -186,4 +186,5 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'internal_key' => env('INTERNAL_API_KEY'),
 ];
