@@ -11,3 +11,24 @@
  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+
+<style>
+	html,
+	body {
+		height: 100%;
+	}
+
+	body.index-page {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	body.index-page main.main {
+		flex: 1 0 auto;
+	}
+
+	body.index-page footer.footer {
+		margin-top: auto;
+	}
+</style>

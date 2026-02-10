@@ -88,6 +88,28 @@
                         @endforeach
                     </ul>
                 </li>
+                <li class="lang-toggle lang-dropdown" data-lang-dropdown>
+                    <button type="button" class="lang-current" data-lang-current
+                        onclick="toggleLangDropdown(this)">
+                        <img src="https://flagsapi.com/ID/shiny/64.png" alt="Indonesia" />
+                        <span>Indonesia</span>
+                        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="lang-menu" data-lang-menu>
+                        <button type="button" class="lang-item" onclick="setSiteLanguage('id')">
+                            <img src="https://flagsapi.com/ID/shiny/64.png" alt="Indonesia" />
+                            <span>Indonesia</span>
+                        </button>
+                        <button type="button" class="lang-item" onclick="setSiteLanguage('en')">
+                            <img src="https://flagsapi.com/US/shiny/64.png" alt="English" />
+                            <span>English</span>
+                        </button>
+                    </div>
+                </li>
                 <!-- <li><a href="contact.html">Contact</a></li> -->
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

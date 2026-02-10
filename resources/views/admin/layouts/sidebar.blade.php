@@ -244,16 +244,16 @@
             }
 
             // Atur menu "Tentang"
-            setupMenu('sidebarTentang', 'tentangLink', '{{ route('tentang.index') }}');
+            setupMenu('sidebarTentang', 'tentangLink', "{{ route('tentang.index') }}");
 
             // Atur menu "Akademik"
-            setupMenu('sidebarAkademik', 'akademikLink', '{{ route('akademik.index') }}');
+            setupMenu('sidebarAkademik', 'akademikLink', "{{ route('akademik.index') }}");
 
             // Atur menu "Berita"
-            setupMenu('sidebarBerita', 'beritaLink', '{{ route('berita.index') }}');
+            setupMenu('sidebarBerita', 'beritaLink', "{{ route('berita.index') }}");
 
             // Atur menu "Kemahasiswaan"
-            setupMenu('sidebarKemahasiswaan', 'kemahasiswaanLink', '{{ route('kemahasiswaan.index') }}');
+            setupMenu('sidebarKemahasiswaan', 'kemahasiswaanLink', "{{ route('kemahasiswaan.index') }}");
         });
     </script>
 

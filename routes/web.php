@@ -50,6 +50,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/visitors/track', [VisitorController::class, 'track'])->name('visitors.track');
 
 Route::prefix('tentang')->group(function () {
     Route::get('/sejarah', [FrontendTentangController::class, 'sejarah'])->name('tentang.sejarah');
