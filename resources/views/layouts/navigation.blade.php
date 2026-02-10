@@ -18,6 +18,33 @@
                 </div>
             </div>
 
+            <div class="hidden sm:flex sm:items-center sm:ms-6">
+                <div class="flex items-center gap-2">
+                    <div class="lang-toggle lang-dropdown" data-lang-dropdown>
+                        <button type="button" class="lang-current" data-lang-current
+                            onclick="toggleLangDropdown(this)">
+                            <img src="https://flagsapi.com/ID/shiny/64.png" alt="Indonesia" />
+                            <span>Indonesia</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="lang-menu" data-lang-menu>
+                            <button type="button" class="lang-item" onclick="setSiteLanguage('id')">
+                                <img src="https://flagsapi.com/ID/shiny/64.png" alt="Indonesia" />
+                                <span>Indonesia</span>
+                            </button>
+                            <button type="button" class="lang-item" onclick="setSiteLanguage('en')">
+                                <img src="https://flagsapi.com/US/shiny/64.png" alt="English" />
+                                <span>English</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
@@ -78,6 +105,32 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <div class="px-4 py-2">
+                <div class="flex items-center gap-2">
+                    <div class="lang-toggle lang-dropdown" data-lang-dropdown>
+                        <button type="button" class="lang-current" data-lang-current
+                            onclick="toggleLangDropdown(this)">
+                            <img src="https://flagsapi.com/ID/shiny/64.png" alt="Indonesia" />
+                            <span>Indonesia</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="lang-menu" data-lang-menu>
+                            <button type="button" class="lang-item" onclick="setSiteLanguage('id')">
+                                <img src="https://flagsapi.com/ID/shiny/64.png" alt="Indonesia" />
+                                <span>Indonesia</span>
+                            </button>
+                            <button type="button" class="lang-item" onclick="setSiteLanguage('en')">
+                                <img src="https://flagsapi.com/US/shiny/64.png" alt="English" />
+                                <span>English</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Responsive Settings Options -->

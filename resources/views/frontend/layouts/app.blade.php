@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8" />
@@ -7,6 +7,7 @@
     <title>Ilmu Komunikasi - Universitas Andalas</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <!-- Favicons -->
     <link href="{{ asset('dist_frontend/assets/img/favicon.png') }}" rel="icon" />
@@ -24,16 +25,18 @@
     @include('frontend.layouts.css')
 </head>
 
-<body class="index-page">
+<body class="index-page d-flex flex-column min-vh-100">
     @include('frontend.layouts.header')
 
-    <main class="main">
+    <main class="main flex-grow-1">
         @yield('content')
     </main>
 
     @include('frontend.layouts.footer')
 
     @include('frontend.layouts.jsfooter')
+
+    @include('partials.google-translate')
 </body>
 
 </html>
